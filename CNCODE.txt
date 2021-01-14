@@ -121,7 +121,7 @@ int crc(char* ip, char* op, char* poly, int mode)
         for (int i = 1; i < strlen(poly); i++)
             strcat(op, "0");
     }
-    //perform xor with the selected polynomial
+   
    
     for (int i = 1; i < strlen(ip); i++) {
         if (op[i] == '1') {
@@ -134,7 +134,7 @@ int crc(char* ip, char* op, char* poly, int mode)
             }
         }
     }
-    // check for errors, return 0 if error detected
+  
     for (int i = 1; i < strlen(poly); i++)
         if (op[i] == '1')
             return 0;
